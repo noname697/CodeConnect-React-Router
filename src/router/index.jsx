@@ -7,6 +7,7 @@ import { Feed } from "../pages/Feed";
 import { BlogPost } from "../pages/BlogPost";
 import { AuthLayout } from "../layouts/Auth";
 import { AppLayout } from "../layouts/App";
+import { NotFound } from "../pages/NotFound";
 
 export const AppRouter = () => {
   return (
@@ -35,6 +36,7 @@ export const AppRouter = () => {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
